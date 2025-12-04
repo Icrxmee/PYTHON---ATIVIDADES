@@ -1,19 +1,50 @@
+from time import sleep
 
-def area(a, b): # Crio a função para calcular área. ¹
+def contador(a , b, c):
 
-    terreno = (a * b)
+    print("-=-" * 20)
+    print ("contagem de 1 em 1 até 10")
+    sleep(2.5)
 
-    print(f"A área de um terreno de {a}x{b} será: {terreno}") # Após declarar os valores da função, vai realizar o cálculo e retornar o resultado. ³
+    for i in range (1, 11, 1):
 
-while True: 
+        print (f"{i}", end=" ", flush=True)
+        sleep(0.5)
+    print()
+    
+    print ("Contagem de 2 em 2 de 10 até 0")
+    sleep(2.5)
 
-    a = float(input("Digite o comprimento do terreno: "))
-    b = float(input("Digite a largura do terreno:"))
+    for i in range (10, 0, -2):
 
-    area(a,b) # Após inputar os valores de a e b, puxo a função criada, e declaro que os valores de a e b dela, sejam os valores inputados. ²
+        print(f"{i}", end=" ", flush=True )
+        sleep(0.5)
+    
+    print("FIM!!!")
+    print("-=-" * 20)
 
-    c = str(input("Deseja continuar[S/N]:")).upper()[0]
+    print("CONTAGEM PERSONALIZADA")
+    sleep(2)
 
-    if c == "N":
+    if c == 0:
+        c = 1
 
-        break
+    if a < b:
+        for i in range (a, b + 1, c):
+            print(i,end=" ", flush=True)
+            sleep(0.3)
+    
+    else:
+        for i in range (a, b - 1, -abs(c)):
+            print(i, end=" ", flush=True)
+            sleep(0.3)
+    
+    print("FIM!!!")
+    print("-=-" * 20)
+
+
+print("Agora sua vez de personalizar.")
+inicio = int(input("Início:"))
+fim = int (input("Fim:"))
+passo = int (input("Passo:"))
+contador(inicio, fim, passo)
