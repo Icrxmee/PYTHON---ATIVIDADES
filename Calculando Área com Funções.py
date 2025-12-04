@@ -17,3 +17,6 @@ while True:
     if c == "N":
 
         break
+    print( )
+
+    
