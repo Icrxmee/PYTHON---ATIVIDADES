@@ -1,29 +1,16 @@
-def fatorial(n, show=False): # A função vai receber um valor e mostrar ou não o cálculo do fatorial desse número.
+def ficha (j= '<Desconhecido>', g= 0): # Declaro previamente que os parâmetros possuem esses valores.
 
-    f = 1 
+    print(f"O jogador {j} fez {g} gol(s)") 
 
-    for c in range (n, 0, -1): # Cálculo do fatorial
-        
-        if show: # Se for declarado o show como True, vai mostrar o cálculo
-            
-            print(f"{c}", end=" ") 
-            
-            if c > 1:
-                print("x", end=" ")
-            
-            else:
-                print("=", end=" ") # Quando o c chegar a 0, não vai printar mais "x", e sim "=" (Apenas estética).
+n = str(input("Digite um nome:")) 
+g = str(input("Digite a quantidade de gols: "))
 
-        f *= c
+if g.isnumeric(): # Se na variável "g" o user tiver escrito algo, ele vai analisar se esse algo é numérico e converter.
+    g = int(g)
+else: # Se não, ele apenas atribui valor 0
+     g = 0
 
-    return f # Retorna o resultado do cálculo.
-
-
-n = int (input("Digite um valor:")) # Aqui digo qual número quero saber o fatorial.
-
-c = str (input("Deseja mostrar o cálculo [S/N]:")).upper()[0] # Aqui decido se quero ou não ver o cálculo.
-
-if c == "S":
-    print(fatorial(n, show=True))
-else:
-    print(fatorial(n, show=False))
+if n.strip() == "": # Se nãoa tiver escrito o nome, apenas chama a função dando o valor dos gols.
+    ficha(g=g) 
+else: # Se tiver nome, chama a função dando ambos valores.
+    ficha(n, g)
