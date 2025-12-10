@@ -16,4 +16,4 @@ def voto(a):
     
     
 ano = int (input("Digite qual ano você nasceu: "))
-print(voto(ano)) # Não precisa armazenar o return em uma variável, ele poder ser puxado diretamente pro print.
+print(voto(ano)) # não precisa armazenar o return em uma variável, ele poder ser puxado diretamente pro print.
