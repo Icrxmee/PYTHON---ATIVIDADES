@@ -16,3 +16,17 @@ def diminuir10(n = 0, f = 0):
 
 def moeda(p=0, m='R$'):
    return f'{m}{p:.2f}'.replace('.',',') 
+
+def escolha():
+
+    while True:
+    
+      n = input("Deseja continuar [S/N]: ").strip().upper()
+
+      if n in ('S', 'N'):
+            return n
+                
+      else:
+            print("ERRO!!! TENTE NOVAMENTE")
+         
+         
